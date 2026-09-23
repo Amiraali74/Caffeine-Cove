@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800&family=Oswald:wght@200..700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f1f1f1;
+    --bg-secondary: #fbfbfb;
+    --dark-gray: #333;
+    --light-brown: #c7a17a;
+    --black: #1f2226;
+}
+
+body {
+    font-family: "Open Sans", serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Oswald", serif;
+    color: var(--dark-gray);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*Utility Classes*/ 
+.container{
+    max-width: 900px;
+    margin: auto;
+}
+.text-primary{
+    color: var(--light-brown);
+}
+.heading{
+    text-align: center;
+}
+.heading span{
+    font-size: 18px;
+}
+.heading h2{
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/*Header Start */
+#header{
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+#header .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+}
+#header .navbar .logo{
+    width: 300px;
+}
+#header .navbar ul{
+    display: flex;
+}
+#header .navbar ul a{
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--dark-gray);
+    transition: all 0.3s ease;
+    margin: 0 17px;
+}
+#header .navbar ul a:hover{
+    color: var(--light-brown);
+}
+/*Home Start */
+ #home{
+     background: url("./img/home-bg.png") center no-repeat;
+     background-size: 100%;
+     background-color: var(--bg-color);
+ }
+#home .home-content{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    min-height: 100vh;
+    gap: 3rem;
+    align-items: center;
+}
+#home .home-content .content-text{
+    margin-left: 15px;
+}
+#home .home-content .content-text h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+#home .home-content .content-text h1{
+    font-size: 65px;
+    margin: 15px 0;
+    line-height: 1.3;
+}
+#home .home-content .content-text p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+#home .home-content .content-text .btn{
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: var(--light-brown);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+#home .home-content .content-text .btn:hover{
+    background-color: var(--dark-gray);
+ 
+    
+}
+#home .home-content .content-text .btn i{
+    margin-left: 10px;
+}
+#home .home-content img{
+    width: 100%;
+    display: block;
+}
+/*Home End */
+/*About Start */
+#about,
+#menu,
+#testimonials,
+#contact,
+#footer .footer-top
+{
+    padding: 6rem 0;
+}
+#about .row{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+#about .row img{
+    max-width: 100%;
+}
+#about .about-content h2{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 28px;
+    
+}
+#about .row .about-content .item{
+    margin: 2rem 0;
+}
+#about .row .about-content .item h3{
+    margin-bottom: 5px;
+}
+/*About End */
+/*Menu Start */
+#menu
+{
+    background-color: var(--bg-color);
+}
+#menu .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+    gap: 3rem;
+}
+
+#menu .row .col{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#menu .row .col .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 20px 0px 20px 20px;
+    margin: 0;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+#menu .row .col .item img{
+    width: 90px;
+}
+
+#menu .row .col .item .details{
+    margin-left: 20px;
+}
+
+#menu .row .col .item .details h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#menu .row .col .item .details p{
+    font-size: 11px;
+    line-height: 1.6;
+}
+/*menu end*/
+/*contact Start */
+#contact .row{
+    
+}
+
+#menu .row .col .item .price{
+    padding: 20px;
+    margin: auto;
+}
+
+#menu .row .col .item .price p{
+    font-size: 20px;
+    font-weight: 600;
+}
+/*Menu End */
+/*Testimonials Start*/
+#testimonials .row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+      margin-top: 6rem;
+    gap: 1.5rem;
+}
+#testimonials .row .item{
+    background: var(--bg-color);
+    padding: 25px 20px 35px;
+    text-align: center;
+}
+#testimonials .row .item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    margin-top: -50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+} 
+#testimonials .row .item h3{
+    margin: 20px 0 10px;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+#testimonials .row .item p{
+    line-height: 1.8;
+    font-size: 15px;
+}
+/*Testimonials end*/
+/*contact Start*/
+#contact,
+#menu
+{
+    background: var(--bg-color);
+    
+}
+#contact .row{
+    display: grid;
+    grid-template-columns: 2fr 1.4fr;
+    margin-top: 2rem;
+}
+#contact .row .contact-content{
+    background: #fff;
+    padding: 2rem;
+}
+#contact .row .contact-content h3{
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#contact .row .contact-content form input,
+#contact .row .contact-content form textarea
+{
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+#contact .row .contact-content button{
+    background: var(--black);
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+#contact .row .contact-content button:hover{
+    background: var(--light-brown);
+}
+#contact .map iframe{
+    width: 100%;
+    height: 100%;
+}
+/*Contact end*/
+/*footer Start*/
+#footer .footer-top{
+    color: #fff;
+    background: url("./img/footer-bg.png");
+}
+#footer .footer-top .row{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+}
+#footer .footer-top .row h3{
+    color: #fff;
+    margin-bottom: 15px;
+    
+}
+#footer .footer-top .row p{
+    width: 350px;
+    line-height: 1.8;
+}
+#footer .footer-top .row ul li{
+    margin: 10px 0;
+    
+}
+#footer .footer-top .row ul li i{
+    margin-right: 10px;
+}
+#footer .footer-top .row .col ul li a{
+    color: #fff;
+}
+#footer .copyright{
+    background: var(--dark-gray);
+    padding: 30px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+#footer .copyright p{
+    font-weight: bold;
+}
+#footer .copyright p a{
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+#footer .copyright p a:hover{
+    color: var(--light-brown);
+}
+/*Footer end*/
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    /* Header */
+    #header .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #header .navbar .logo {
+        width: 180px;
+    }
+
+    #header .navbar ul a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+
+    /* Home */
+    #home .home-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 140px 0 50px;
+    }
+
+    #home .home-content .content-text {
+        margin-left: 0;
+    }
+
+    #home .home-content .content-text h1 {
+        font-size: 45px;
+    }
+
+    #home .home-content img {
+        width: 80%;
+        margin: auto;
+    }
+
+    /* About */
+    #about .row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Menu */
+    #menu .row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Testimonials */
+    #testimonials .row {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    /* Contact */
+    #contact .row {
+        grid-template-columns: 1fr;
+    }
+
+    #contact .map iframe {
+        height: 300px;
+    }
+
+    /* Footer */
+    #footer .footer-top .row {
+        grid-template-columns: 1fr;
+    }
+
+    #footer .footer-top .row p {
+        width: 100%;
+    }
+}
